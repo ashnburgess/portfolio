@@ -14,16 +14,18 @@ html {
 
 body {
     font-family: "Segoe UI", Arial, sans-serif;
-
     background: #f8f7fb;
-
     color: #252331;
-
     line-height: 1.7;
 }
 
 main {
     overflow: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
 }
 
 
@@ -33,66 +35,43 @@ main {
 
 .nav {
     max-width: 1180px;
-
     margin: 0 auto;
-
     padding: 26px 30px;
-
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
 }
 
 .logo {
     width: 48px;
     height: 48px;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     border-radius: 50%;
-
     background: #ffffff;
-
     color: #70456f;
-
     font-weight: 700;
-
     font-size: 17px;
-
-    box-shadow:
-        0 8px 24px
-        rgba(57, 32, 56, 0.15);
+    box-shadow: 0 8px 24px rgba(57, 32, 56, 0.15);
 }
 
 .nav-links {
     display: flex;
-
     gap: 30px;
 }
 
 .nav-links a {
     text-decoration: none;
-
     color: #ffffff;
-
     font-size: 15px;
-
     font-weight: 600;
-
     opacity: 0.9;
-
     transition: 0.2s ease;
 }
 
 .nav-links a:hover {
     opacity: 1;
-
     transform: translateY(-1px);
 }
 
@@ -103,9 +82,7 @@ main {
 
 .hero {
     min-height: 92vh;
-
     color: #ffffff;
-
     background:
         radial-gradient(
             circle at 85% 20%,
@@ -113,83 +90,53 @@ main {
             rgba(255, 255, 255, 0.12) 13%,
             transparent 13%
         ),
-
         linear-gradient(
             135deg,
             #46354e 0%,
             #704b6d 50%,
             #a36d88 100%
         );
-
     position: relative;
-
     border-bottom-left-radius: 60px;
-
     border-bottom-right-radius: 60px;
 }
 
 .hero::after {
     content: "";
-
     position: absolute;
-
     width: 220px;
     height: 220px;
-
     border-radius: 50%;
-
-    background:
-        rgba(255, 255, 255, 0.08);
-
+    background: rgba(255, 255, 255, 0.08);
     right: 8%;
-
     bottom: 8%;
 }
 
 .hero-content {
     max-width: 1180px;
-
     margin: 0 auto;
-
     padding: 110px 30px 150px;
-
     position: relative;
-
     z-index: 2;
 }
 
 .eyebrow {
     display: inline-block;
-
-    background:
-        rgba(255, 255, 255, 0.12);
-
-    border:
-        1px solid rgba(255, 255, 255, 0.2);
-
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 999px;
-
     padding: 8px 16px;
-
     margin-bottom: 25px;
-
     font-size: 12px;
-
     letter-spacing: 2px;
-
     font-weight: 700;
 }
 
 .hero h1 {
-    font-size:
-        clamp(56px, 7vw, 95px);
-
+    font-size: clamp(56px, 7vw, 95px);
     line-height: 1.03;
-
     max-width: 950px;
-
     letter-spacing: -2px;
-
     margin-bottom: 30px;
 }
 
@@ -199,11 +146,8 @@ main {
 
 .hero-description {
     max-width: 690px;
-
     color: #f4edf2;
-
     font-size: 20px;
-
     margin-bottom: 38px;
 }
 
@@ -214,34 +158,19 @@ main {
 
 .button {
     display: inline-block;
-
     text-decoration: none;
-
     padding: 15px 24px;
-
     border-radius: 999px;
-
     background: #ffffff;
-
     color: #684662;
-
     font-weight: 700;
-
-    box-shadow:
-        0 10px 30px
-        rgba(32, 17, 31, 0.17);
-
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
+    box-shadow: 0 10px 30px rgba(32, 17, 31, 0.17);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .button:hover {
     transform: translateY(-3px);
-
-    box-shadow:
-        0 14px 35px
-        rgba(32, 17, 31, 0.24);
+    box-shadow: 0 14px 35px rgba(32, 17, 31, 0.24);
 }
 
 
@@ -251,29 +180,19 @@ main {
 
 .section {
     max-width: 1180px;
-
     margin: 0 auto;
-
     padding: 110px 30px;
 }
 
 .section-label {
     display: inline-block;
-
     color: #815a79;
-
     background: #f0e6ee;
-
     padding: 7px 13px;
-
     border-radius: 999px;
-
     font-size: 12px;
-
     letter-spacing: 2px;
-
     font-weight: 700;
-
     margin-bottom: 28px;
 }
 
@@ -288,83 +207,52 @@ main {
 
 .about::before {
     content: "";
-
     position: absolute;
-
     width: 260px;
     height: 260px;
-
     border-radius: 50%;
-
     background: #f0e6ee;
-
     left: -180px;
-
     top: 80px;
-
     z-index: -1;
 }
 
 .about-grid {
     display: grid;
-
-    grid-template-columns:
-        0.85fr 1.15fr;
-
+    grid-template-columns: 0.85fr 1.15fr;
     gap: 80px;
-
     align-items: start;
 }
 
 .about h2 {
-    font-size:
-        clamp(38px, 5vw, 60px);
-
+    font-size: clamp(38px, 5vw, 60px);
     line-height: 1.1;
-
     letter-spacing: -1px;
-
     color: #322c3b;
-
     position: relative;
 }
 
 .about h2::after {
     content: "";
-
     display: block;
-
     width: 75px;
-
     height: 5px;
-
     background: #b87994;
-
     border-radius: 10px;
-
     margin-top: 24px;
 }
 
 .about-text {
     background: #ffffff;
-
-    border:
-        1px solid #ece6eb;
-
+    border: 1px solid #ece6eb;
     border-radius: 28px;
-
     padding: 38px 40px;
-
-    box-shadow:
-        0 20px 55px
-        rgba(54, 37, 53, 0.08);
+    box-shadow: 0 20px 55px rgba(54, 37, 53, 0.08);
 }
 
 .about-text p {
     color: #615b69;
-
     font-size: 17px;
-
     margin-bottom: 20px;
 }
 
@@ -383,235 +271,167 @@ main {
 
 .learning::before {
     content: "";
-
     position: absolute;
-
     left: 30px;
-
     right: 30px;
-
     top: 0;
-
     height: 1px;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            #d8ccd5,
-            transparent
-        );
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #d8ccd5,
+        transparent
+    );
 }
-
-
-/* INTRO */
 
 .learning-intro {
     max-width: 720px;
-
     margin-bottom: 45px;
 }
 
 .learning-intro h2 {
-    font-size:
-        clamp(36px, 5vw, 54px);
-
+    font-size: clamp(36px, 5vw, 54px);
     line-height: 1.1;
-
     color: #332d3c;
-
     margin-bottom: 16px;
 }
 
 .learning-intro p {
     font-size: 18px;
-
     color: #6c6571;
 }
 
-
-/* GRID */
-
 .learning-grid {
     display: grid;
-
     grid-template-columns: 1fr;
-
     gap: 30px;
 }
 
 
-/* CARDS */
+/* =========================
+   LEARNING CARDS
+========================= */
 
 .learning-card {
     position: relative;
-
     background: #ffffff;
-
-    border:
-        1px solid #eadfe7;
-
+    border: 1px solid #eadfe7;
     border-radius: 28px;
-
     padding: 42px;
-
-    box-shadow:
-        0 18px 50px
-        rgba(64, 38, 61, 0.08);
-
+    box-shadow: 0 18px 50px rgba(64, 38, 61, 0.08);
     overflow: hidden;
-
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .learning-card:hover {
     transform: translateY(-4px);
-
-    box-shadow:
-        0 24px 60px
-        rgba(64, 38, 61, 0.13);
+    box-shadow: 0 24px 60px rgba(64, 38, 61, 0.13);
 }
-
-
-/* DECORATIVE BUBBLE */
 
 .learning-card::after {
     content: "";
-
     position: absolute;
-
     width: 180px;
-
     height: 180px;
-
     border-radius: 50%;
-
     background: #f4e8ee;
-
     right: -85px;
-
     top: -85px;
-
     z-index: 0;
 }
 
-
-/* WEEK ROW */
+.learning-card > * {
+    position: relative;
+    z-index: 2;
+}
 
 .week-row {
     display: flex;
-
     align-items: center;
-
+    flex-wrap: wrap;
     gap: 12px;
-
     margin-bottom: 22px;
-
-    position: relative;
-
-    z-index: 2;
 }
-
-
-/* WEEK BADGE */
 
 .week {
     display: inline-block;
-
     background: #f1dce7;
-
     color: #563a52;
-
-    border:
-        1px solid #dfbfd0;
-
+    border: 1px solid #dfbfd0;
     padding: 8px 16px;
-
     border-radius: 999px;
-
     font-size: 12px;
-
     letter-spacing: 1.5px;
-
     font-weight: 800;
 }
 
-
-/* ENTRY TYPE */
-
 .entry-type {
     color: #817581;
-
     font-size: 13px;
-
     font-weight: 600;
 }
 
-
-/* CARD CONTENT */
+.entry-date {
+    color: #9a8e98;
+    font-size: 13px;
+    font-weight: 600;
+}
 
 .learning-card h3 {
     font-size: 31px;
-
     line-height: 1.2;
-
     color: #332d3c;
-
     margin-bottom: 18px;
-
-    position: relative;
-
-    z-index: 2;
 }
 
 .learning-card p {
     max-width: 850px;
-
     color: #625c69;
-
     font-size: 17px;
-
     margin-bottom: 16px;
-
-    position: relative;
-
-    z-index: 2;
 }
-
-
-/* SKILL TAGS */
 
 .skills-row {
     display: flex;
-
     flex-wrap: wrap;
-
     gap: 10px;
-
     margin-top: 26px;
-
-    position: relative;
-
-    z-index: 2;
 }
 
 .skills-row span {
     background: #f7f3f6;
-
     color: #654c61;
-
-    border:
-        1px solid #e9dfe6;
-
+    border: 1px solid #e9dfe6;
     border-radius: 999px;
-
     padding: 7px 13px;
-
     font-size: 13px;
-
     font-weight: 600;
+}
+
+
+/* =========================
+   FEATURED CARD WITH IMAGE
+========================= */
+
+.featured-card {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 32px;
+    align-items: start;
+}
+
+.learning-card-image img {
+    width: 100%;
+    height: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    border-radius: 22px;
+    border: 1px solid #eadfe7;
+    box-shadow: 0 12px 30px rgba(64, 38, 61, 0.10);
+}
+
+.learning-card-content {
+    min-width: 0;
 }
 
 
@@ -621,93 +441,58 @@ main {
 
 .contact {
     max-width: 1120px;
-
     margin-bottom: 100px;
-
     border-radius: 35px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #4d3c54,
-            #815a79
-        );
-
+    background: linear-gradient(
+        135deg,
+        #4d3c54,
+        #815a79
+    );
     color: #ffffff;
-
     padding: 75px;
-
-    box-shadow:
-        0 25px 70px
-        rgba(51, 34, 51, 0.15);
-
+    box-shadow: 0 25px 70px rgba(51, 34, 51, 0.15);
     position: relative;
-
     overflow: hidden;
 }
 
 .contact::after {
     content: "";
-
     position: absolute;
-
     width: 280px;
-
     height: 280px;
-
     border-radius: 50%;
-
-    border:
-        45px solid rgba(255, 255, 255, 0.06);
-
+    border: 45px solid rgba(255, 255, 255, 0.06);
     right: -80px;
-
     top: -80px;
 }
 
 .contact .section-label {
     color: #ffffff;
-
-    background:
-        rgba(255, 255, 255, 0.12);
-
-    border:
-        1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .contact h2 {
     font-size: 50px;
-
     line-height: 1.1;
-
     margin-bottom: 14px;
-
     position: relative;
-
     z-index: 2;
 }
 
 .contact p {
     max-width: 600px;
-
     color: #eee3eb;
-
     font-size: 18px;
-
     margin-bottom: 30px;
-
     position: relative;
-
     z-index: 2;
 }
 
 .secondary {
     background: #ffffff;
-
     color: #65445f;
-
     position: relative;
-
     z-index: 2;
 }
 
@@ -718,14 +503,9 @@ main {
 
 footer {
     text-align: center;
-
     padding: 35px;
-
-    border-top:
-        1px solid #e7e1e6;
-
+    border-top: 1px solid #e7e1e6;
     color: #817985;
-
     font-size: 14px;
 }
 
@@ -733,6 +513,16 @@ footer {
 /* =========================
    MOBILE
 ========================= */
+
+@media (max-width: 950px) {
+    .featured-card {
+        grid-template-columns: 1fr;
+    }
+
+    .learning-card-image img {
+        max-height: 320px;
+    }
+}
 
 @media (max-width: 760px) {
 
@@ -750,15 +540,12 @@ footer {
 
     .hero {
         min-height: auto;
-
         border-bottom-left-radius: 35px;
-
         border-bottom-right-radius: 35px;
     }
 
     .hero-content {
-        padding:
-            80px 22px 110px;
+        padding: 80px 22px 110px;
     }
 
     .hero h1 {
@@ -770,13 +557,11 @@ footer {
     }
 
     .section {
-        padding:
-            80px 22px;
+        padding: 80px 22px;
     }
 
     .about-grid {
         grid-template-columns: 1fr;
-
         gap: 40px;
     }
 
@@ -790,9 +575,7 @@ footer {
 
     .week-row {
         flex-direction: column;
-
         align-items: flex-start;
-
         gap: 8px;
     }
 
@@ -801,15 +584,11 @@ footer {
     }
 
     .contact {
-        margin:
-            30px 20px 70px;
-
-        padding:
-            50px 28px;
+        margin: 30px 20px 70px;
+        padding: 50px 28px;
     }
 
     .contact h2 {
         font-size: 39px;
     }
-
 }
