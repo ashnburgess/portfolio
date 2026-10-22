@@ -1162,303 +1162,303 @@ footer {
         font-size: 39px;
     }
     /* =========================
-   RESUME PAGE HEADER
-========================= */
-
-.resume-header {
-    color: #ffffff;
-
-    background:
-        linear-gradient(
-            135deg,
-            #46354e 0%,
-            #704b6d 50%,
-            #a36d88 100%
-        );
-
-    border-bottom-left-radius: 55px;
-    border-bottom-right-radius: 55px;
-}
-
-.resume-header-content {
-    max-width: 1180px;
-
-    margin: 0 auto;
-
-    padding: 85px 30px 110px;
-}
-
-.resume-header-content h1 {
-    font-size: clamp(55px, 8vw, 92px);
-
-    line-height: 1;
-
-    margin-bottom: 24px;
-}
-
-.resume-header-content > p {
-    max-width: 700px;
-
-    color: #f2eaf0;
-
-    font-size: 19px;
-
-    margin-bottom: 30px;
-}
-
-.resume-header-buttons {
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 14px;
-}
-
-.outline-button {
-    background: transparent;
-
-    color: #ffffff;
-
-    border:
-        1px solid rgba(255,255,255,0.45);
-
-    box-shadow: none;
-}
-
-.outline-button:hover {
-    background:
-        rgba(255,255,255,0.10);
-}
-
-
-/* =========================
-   RESUME SECTIONS
-========================= */
-
-.resume-section {
-    position: relative;
-}
-
-.resume-section + .resume-section {
-    border-top:
-        1px solid #e7e1e6;
-}
-
-
-/* =========================
-   RESUME CARDS
-========================= */
-
-.resume-card {
-    background: #ffffff;
-
-    border:
-        1px solid #eadfe7;
-
-    border-radius: 26px;
-
-    padding: 35px 38px;
-
-    margin-bottom: 24px;
-
-    box-shadow:
-        0 14px 40px
-        rgba(64, 38, 61, 0.07);
-}
-
-.resume-card-heading {
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: flex-start;
-
-    gap: 30px;
-
-    margin-bottom: 16px;
-}
-
-.resume-card h2 {
-    color: #332d3c;
-
-    font-size: 26px;
-
-    line-height: 1.2;
-}
-
-.resume-card h3 {
-    color: #4a3a4a;
-
-    font-size: 19px;
-
-    margin-bottom: 8px;
-}
-
-.resume-subtitle {
-    color: #817581;
-
-    font-size: 15px;
-}
-
-.resume-date {
-    color: #704b6d;
-
-    background: #f1dce7;
-
-    border:
-        1px solid #dfbfd0;
-
-    padding: 6px 12px;
-
-    border-radius: 999px;
-
-    font-size: 12px;
-
-    font-weight: 700;
-
-    white-space: nowrap;
-}
-
-.resume-card > p {
-    color: #625c69;
-
-    margin-bottom: 14px;
-}
-
-.resume-card ul {
-    padding-left: 20px;
-
-    color: #625c69;
-}
-
-.resume-card li {
-    margin-bottom: 8px;
-}
-
-
-/* =========================
-   SKILL CARDS
-========================= */
-
-.skills-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(2, 1fr);
-
-    gap: 20px;
-}
-
-.skill-card {
-    background: #ffffff;
-
-    border:
-        1px solid #eadfe7;
-
-    border-radius: 24px;
-
-    padding: 28px;
-
-    box-shadow:
-        0 12px 35px
-        rgba(64, 38, 61, 0.06);
-}
-
-.skill-card h3 {
-    color: #332d3c;
-
-    margin-bottom: 8px;
-}
-
-.skill-card p {
-    color: #625c69;
-}
-
-
-/* =========================
-   PROJECT CARDS
-========================= */
-
-.project-card {
-    border-left:
-        5px solid #b87994;
-}
-
-
-/* =========================
-   ADDITIONAL
-========================= */
-
-.additional-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap: 20px;
-}
-
-.additional-card {
-    background: #ffffff;
-
-    border:
-        1px solid #eadfe7;
-
-    border-radius: 24px;
-
-    padding: 26px;
-
-    text-align: center;
-
-    box-shadow:
-        0 12px 35px
-        rgba(64, 38, 61, 0.06);
-}
-
-.additional-card h3 {
-    color: #332d3c;
-
-    margin-bottom: 8px;
-}
-
-.additional-card p {
-    color: #625c69;
-}
-
-
-/* =========================
-   RESUME MOBILE
-========================= */
-
-@media (max-width: 760px) {
+    RESUME PAGE HEADER
+    ========================= */
+
+    .resume-header {
+        color: #ffffff;
+
+        background:
+            linear-gradient(
+                135deg,
+                #46354e 0%,
+                #704b6d 50%,
+                #a36d88 100%
+            );
+
+        border-bottom-left-radius: 55px;
+        border-bottom-right-radius: 55px;
+    }
 
     .resume-header-content {
-        padding:
-            65px 22px 80px;
+        max-width: 1180px;
+
+        margin: 0 auto;
+
+        padding: 85px 30px 110px;
     }
 
     .resume-header-content h1 {
-        font-size: 55px;
+        font-size: clamp(55px, 8vw, 92px);
+
+        line-height: 1;
+
+        margin-bottom: 24px;
+    }
+
+    .resume-header-content > p {
+        max-width: 700px;
+
+        color: #f2eaf0;
+
+        font-size: 19px;
+
+        margin-bottom: 30px;
+    }
+
+    .resume-header-buttons {
+        display: flex;
+
+        flex-wrap: wrap;
+
+        gap: 14px;
+    }
+
+    .outline-button {
+        background: transparent;
+
+        color: #ffffff;
+
+        border:
+            1px solid rgba(255,255,255,0.45);
+
+        box-shadow: none;
+    }
+
+    .outline-button:hover {
+        background:
+            rgba(255,255,255,0.10);
+    }
+
+
+    /* =========================
+    RESUME SECTIONS
+    ========================= */
+
+    .resume-section {
+        position: relative;
+    }
+
+    .resume-section + .resume-section {
+        border-top:
+            1px solid #e7e1e6;
+    }
+
+
+    /* =========================
+    RESUME CARDS
+    ========================= */
+
+    .resume-card {
+        background: #ffffff;
+
+        border:
+            1px solid #eadfe7;
+
+        border-radius: 26px;
+
+        padding: 35px 38px;
+
+        margin-bottom: 24px;
+
+        box-shadow:
+            0 14px 40px
+            rgba(64, 38, 61, 0.07);
     }
 
     .resume-card-heading {
-        flex-direction: column;
+        display: flex;
 
-        gap: 10px;
+        justify-content: space-between;
+
+        align-items: flex-start;
+
+        gap: 30px;
+
+        margin-bottom: 16px;
     }
+
+    .resume-card h2 {
+        color: #332d3c;
+
+        font-size: 26px;
+
+        line-height: 1.2;
+    }
+
+    .resume-card h3 {
+        color: #4a3a4a;
+
+        font-size: 19px;
+
+        margin-bottom: 8px;
+    }
+
+    .resume-subtitle {
+        color: #817581;
+
+        font-size: 15px;
+    }
+
+    .resume-date {
+        color: #704b6d;
+
+        background: #f1dce7;
+
+        border:
+            1px solid #dfbfd0;
+
+        padding: 6px 12px;
+
+        border-radius: 999px;
+
+        font-size: 12px;
+
+        font-weight: 700;
+
+        white-space: nowrap;
+    }
+
+    .resume-card > p {
+        color: #625c69;
+
+        margin-bottom: 14px;
+    }
+
+    .resume-card ul {
+        padding-left: 20px;
+
+        color: #625c69;
+    }
+
+    .resume-card li {
+        margin-bottom: 8px;
+    }
+
+
+    /* =========================
+    SKILL CARDS
+    ========================= */
 
     .skills-grid {
-        grid-template-columns: 1fr;
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 20px;
     }
+
+    .skill-card {
+        background: #ffffff;
+
+        border:
+            1px solid #eadfe7;
+
+        border-radius: 24px;
+
+        padding: 28px;
+
+        box-shadow:
+            0 12px 35px
+            rgba(64, 38, 61, 0.06);
+    }
+
+    .skill-card h3 {
+        color: #332d3c;
+
+        margin-bottom: 8px;
+    }
+
+    .skill-card p {
+        color: #625c69;
+    }
+
+
+    /* =========================
+    PROJECT CARDS
+    ========================= */
+
+    .project-card {
+        border-left:
+            5px solid #b87994;
+    }
+
+
+    /* =========================
+    ADDITIONAL
+    ========================= */
 
     .additional-grid {
-        grid-template-columns: 1fr;
+        display: grid;
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap: 20px;
     }
 
-    .resume-card {
-        padding: 28px;
+    .additional-card {
+        background: #ffffff;
+
+        border:
+            1px solid #eadfe7;
+
+        border-radius: 24px;
+
+        padding: 26px;
+
+        text-align: center;
+
+        box-shadow:
+            0 12px 35px
+            rgba(64, 38, 61, 0.06);
     }
 
-}
+    .additional-card h3 {
+        color: #332d3c;
+
+        margin-bottom: 8px;
+    }
+
+    .additional-card p {
+        color: #625c69;
+    }
+
+
+    /* =========================
+    RESUME MOBILE
+    ========================= */
+
+    @media (max-width: 760px) {
+
+        .resume-header-content {
+            padding:
+                65px 22px 80px;
+        }
+
+        .resume-header-content h1 {
+            font-size: 55px;
+        }
+
+        .resume-card-heading {
+            flex-direction: column;
+
+            gap: 10px;
+        }
+
+        .skills-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .additional-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .resume-card {
+            padding: 28px;
+        }
+
+    }
 
 }
