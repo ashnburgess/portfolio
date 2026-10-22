@@ -1,6 +1,12 @@
-/* =========================
-   GLOBAL
-========================= */
+/* =========================================================
+   ASHLYNN BURGESS PORTFOLIO
+   COMPLETE STYLESHEET
+========================================================= */
+
+
+/* =========================================================
+   1. GLOBAL RESET
+========================================================= */
 
 * {
     margin: 0;
@@ -13,13 +19,11 @@ html {
 }
 
 body {
-    font-family: "Segoe UI", Arial, sans-serif;
-
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
     background: #f8f7fb;
-
     color: #252331;
-
     line-height: 1.7;
+    overflow-x: hidden;
 }
 
 main {
@@ -31,12 +35,87 @@ img {
     max-width: 100%;
 }
 
+a {
+    color: inherit;
+}
 
-/* =========================
-   NAVIGATION
-========================= */
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+
+/* =========================================================
+   2. GLOBAL COLOR VARIABLES
+========================================================= */
+
+:root {
+    --plum-dark: #46354e;
+    --plum: #704b6d;
+    --plum-light: #815a79;
+
+    --rose-dark: #a36d88;
+    --rose: #b87994;
+    --rose-light: #f1dce7;
+    --rose-pale: #f4e8ee;
+
+    --pink-light: #f7c9da;
+    --pink-pale: #f0e6ee;
+
+    --blue-pale: #d8e4ee;
+
+    --white: #ffffff;
+
+    --background: #f8f7fb;
+
+    --text-dark: #252331;
+    --text-heading: #332d3c;
+    --text-medium: #625c69;
+    --text-light: #817581;
+
+    --border: #eadfe7;
+    --border-light: #ece6eb;
+}
+
+
+/* =========================================================
+   3. GENERAL PAGE LAYOUT
+========================================================= */
+
+.section {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 110px 30px;
+}
+
+.section-label {
+    display: inline-block;
+
+    color: var(--plum-light);
+    background: var(--pink-pale);
+
+    padding: 7px 13px;
+
+    border-radius: 999px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 28px;
+}
+
+
+/* =========================================================
+   4. NAVIGATION
+========================================================= */
 
 .nav {
+    width: 100%;
     max-width: 1180px;
 
     margin: 0 auto;
@@ -44,10 +123,11 @@ img {
     padding: 26px 30px;
 
     display: flex;
-
+    align-items: center;
     justify-content: space-between;
 
-    align-items: center;
+    position: relative;
+    z-index: 10;
 }
 
 .logo {
@@ -55,20 +135,18 @@ img {
     height: 48px;
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
+
+    flex-shrink: 0;
+
+    background: var(--white);
+    color: var(--plum);
 
     border-radius: 50%;
 
-    background: #ffffff;
-
-    color: #70456f;
-
-    font-weight: 700;
-
     font-size: 17px;
+    font-weight: 700;
 
     box-shadow:
         0 8px 24px
@@ -77,20 +155,19 @@ img {
 
 .nav-links {
     display: flex;
-
+    align-items: center;
     gap: 30px;
 }
 
 .nav-links a {
+    color: var(--white);
+
     text-decoration: none;
 
-    color: #ffffff;
-
     font-size: 15px;
-
     font-weight: 600;
 
-    opacity: 0.9;
+    opacity: 0.92;
 
     transition:
         opacity 0.2s ease,
@@ -99,19 +176,18 @@ img {
 
 .nav-links a:hover {
     opacity: 1;
-
     transform: translateY(-1px);
 }
 
 
-/* =========================
-   HERO
-========================= */
+/* =========================================================
+   5. HOMEPAGE HERO
+========================================================= */
 
 .hero {
     min-height: 92vh;
 
-    color: #ffffff;
+    color: var(--white);
 
     background:
         radial-gradient(
@@ -120,7 +196,6 @@ img {
             rgba(255, 255, 255, 0.12) 13%,
             transparent 13%
         ),
-
         linear-gradient(
             135deg,
             #46354e 0%,
@@ -131,8 +206,9 @@ img {
     position: relative;
 
     border-bottom-left-radius: 60px;
-
     border-bottom-right-radius: 60px;
+
+    overflow: hidden;
 }
 
 .hero::after {
@@ -149,11 +225,13 @@ img {
         rgba(255, 255, 255, 0.08);
 
     right: 8%;
-
     bottom: 8%;
+
+    pointer-events: none;
 }
 
 .hero-content {
+    width: 100%;
     max-width: 1180px;
 
     margin: 0 auto;
@@ -161,7 +239,6 @@ img {
     padding: 120px 30px 160px;
 
     position: relative;
-
     z-index: 2;
 }
 
@@ -172,7 +249,7 @@ img {
         rgba(255, 255, 255, 0.12);
 
     border:
-        1px solid rgba(255, 255, 255, 0.2);
+        1px solid rgba(255, 255, 255, 0.20);
 
     border-radius: 999px;
 
@@ -181,19 +258,18 @@ img {
     margin-bottom: 25px;
 
     font-size: 12px;
+    font-weight: 700;
 
     letter-spacing: 2px;
-
-    font-weight: 700;
 }
 
 .hero h1 {
+    max-width: 850px;
+
     font-size:
         clamp(56px, 7vw, 95px);
 
     line-height: 1.03;
-
-    max-width: 850px;
 
     letter-spacing: -2px;
 
@@ -201,7 +277,7 @@ img {
 }
 
 .hero h1 span {
-    color: #f7c9da;
+    color: var(--pink-light);
 }
 
 .hero-description {
@@ -215,21 +291,20 @@ img {
 }
 
 
-/* =========================
-   BUTTONS
-========================= */
+/* =========================================================
+   6. BUTTONS
+========================================================= */
 
 .button {
     display: inline-block;
-
-    text-decoration: none;
 
     padding: 15px 24px;
 
     border-radius: 999px;
 
-    background: #ffffff;
+    text-decoration: none;
 
+    background: var(--white);
     color: #684662;
 
     font-weight: 700;
@@ -240,7 +315,8 @@ img {
 
     transition:
         transform 0.2s ease,
-        box-shadow 0.2s ease;
+        box-shadow 0.2s ease,
+        background 0.2s ease;
 }
 
 .button:hover {
@@ -252,42 +328,9 @@ img {
 }
 
 
-/* =========================
-   GENERAL SECTIONS
-========================= */
-
-.section {
-    max-width: 1180px;
-
-    margin: 0 auto;
-
-    padding: 110px 30px;
-}
-
-.section-label {
-    display: inline-block;
-
-    color: #815a79;
-
-    background: #f0e6ee;
-
-    padding: 7px 13px;
-
-    border-radius: 999px;
-
-    font-size: 12px;
-
-    letter-spacing: 2px;
-
-    font-weight: 700;
-
-    margin-bottom: 28px;
-}
-
-
-/* =========================
-   ABOUT
-========================= */
+/* =========================================================
+   7. ABOUT SECTION
+========================================================= */
 
 .about {
     position: relative;
@@ -303,10 +346,9 @@ img {
 
     border-radius: 50%;
 
-    background: #f0e6ee;
+    background: var(--pink-pale);
 
     left: -180px;
-
     top: 80px;
 
     z-index: -1;
@@ -324,17 +366,17 @@ img {
 }
 
 
-/* ABOUT PORTRAIT */
+/* =========================================================
+   8. ABOUT PORTRAIT
+========================================================= */
 
 .about-photo {
     display: flex;
-
     justify-content: center;
 }
 
 .about-photo-frame {
     width: 100%;
-
     max-width: 330px;
 
     aspect-ratio: 4 / 5;
@@ -343,10 +385,10 @@ img {
 
     border-radius: 32px;
 
-    background: #ffffff;
+    background: var(--white);
 
     border:
-        1px solid #eadfe7;
+        1px solid var(--border);
 
     box-shadow:
         0 20px 55px
@@ -368,7 +410,6 @@ img {
     background: #edd9e4;
 
     top: -25px;
-
     left: -25px;
 
     z-index: -1;
@@ -384,10 +425,9 @@ img {
 
     border-radius: 50%;
 
-    background: #d8e4ee;
+    background: var(--blue-pale);
 
     bottom: -20px;
-
     right: -20px;
 
     z-index: -1;
@@ -395,7 +435,6 @@ img {
 
 .about-photo-frame img {
     width: 100%;
-
     height: 100%;
 
     object-fit: cover;
@@ -404,7 +443,9 @@ img {
 }
 
 
-/* ABOUT CONTENT */
+/* =========================================================
+   9. ABOUT CONTENT
+========================================================= */
 
 .about-content h2 {
     font-size:
@@ -427,7 +468,7 @@ img {
     width: 75px;
     height: 5px;
 
-    background: #b87994;
+    background: var(--rose);
 
     border-radius: 10px;
 
@@ -435,10 +476,10 @@ img {
 }
 
 .about-text {
-    background: #ffffff;
+    background: var(--white);
 
     border:
-        1px solid #ece6eb;
+        1px solid var(--border-light);
 
     border-radius: 28px;
 
@@ -462,9 +503,9 @@ img {
 }
 
 
-/* =========================
-   WEEKLY UPDATES PREVIEW
-========================= */
+/* =========================================================
+   10. HOMEPAGE UPDATES PREVIEW
+========================================================= */
 
 .updates-preview {
     position: relative;
@@ -476,9 +517,7 @@ img {
     position: absolute;
 
     left: 30px;
-
     right: 30px;
-
     top: 0;
 
     height: 1px;
@@ -509,19 +548,19 @@ img {
 
     line-height: 1.1;
 
-    color: #332d3c;
+    color: var(--text-heading);
 
     margin-bottom: 20px;
 }
 
 .updates-preview-text p {
-    color: #625c69;
+    max-width: 560px;
+
+    color: var(--text-medium);
 
     font-size: 18px;
 
     margin-bottom: 30px;
-
-    max-width: 560px;
 }
 
 .updates-button {
@@ -529,9 +568,8 @@ img {
 
     text-decoration: none;
 
-    background: #704b6d;
-
-    color: #ffffff;
+    background: var(--plum);
+    color: var(--white);
 
     padding: 14px 22px;
 
@@ -551,15 +589,17 @@ img {
 }
 
 
-/* LATEST UPDATE CARD */
+/* =========================================================
+   11. LATEST UPDATE CARD
+========================================================= */
 
 .latest-update {
     position: relative;
 
-    background: #ffffff;
+    background: var(--white);
 
     border:
-        1px solid #eadfe7;
+        1px solid var(--border);
 
     border-radius: 28px;
 
@@ -578,28 +618,69 @@ img {
     position: absolute;
 
     width: 160px;
-
     height: 160px;
 
     border-radius: 50%;
 
-    background: #f4e8ee;
+    background: var(--rose-pale);
 
     right: -70px;
-
     top: -70px;
+
+    z-index: 0;
 }
 
 .latest-update > * {
     position: relative;
-
     z-index: 2;
 }
+
+.latest-date {
+    color: #9a8e98;
+
+    font-size: 13px;
+
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+.latest-update h3 {
+    color: var(--text-heading);
+
+    font-size: 28px;
+
+    line-height: 1.2;
+
+    margin-bottom: 14px;
+}
+
+.latest-update > p:not(.latest-date) {
+    color: var(--text-medium);
+
+    margin-bottom: 18px;
+}
+
+.latest-update a {
+    color: var(--plum);
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+.latest-update a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   12. WEEK BADGE
+========================================================= */
 
 .week {
     display: inline-block;
 
-    background: #f1dce7;
+    background: var(--rose-light);
 
     color: #563a52;
 
@@ -617,51 +698,13 @@ img {
     font-weight: 800;
 }
 
-.latest-date {
-    color: #9a8e98;
 
-    font-size: 13px;
-
-    margin-top: 15px;
-
-    margin-bottom: 8px;
-}
-
-.latest-update h3 {
-    color: #332d3c;
-
-    font-size: 28px;
-
-    line-height: 1.2;
-
-    margin-bottom: 14px;
-}
-
-.latest-update > p:not(.latest-date) {
-    color: #625c69;
-
-    margin-bottom: 18px;
-}
-
-.latest-update a {
-    color: #704b6d;
-
-    font-weight: 700;
-
-    text-decoration: none;
-}
-
-.latest-update a:hover {
-    text-decoration: underline;
-}
-
-
-/* =========================
-   UPDATES PAGE HEADER
-========================= */
+/* =========================================================
+   13. UPDATES PAGE HEADER
+========================================================= */
 
 .updates-header {
-    color: #ffffff;
+    color: var(--white);
 
     background:
         linear-gradient(
@@ -672,11 +715,13 @@ img {
         );
 
     border-bottom-left-radius: 55px;
-
     border-bottom-right-radius: 55px;
+
+    overflow: hidden;
 }
 
 .updates-header-content {
+    width: 100%;
     max-width: 1180px;
 
     margin: 0 auto;
@@ -702,10 +747,9 @@ img {
 }
 
 
-/* =========================
-   WEEKLY UPDATE CARDS
-   USED ON updates.html
-========================= */
+/* =========================================================
+   14. WEEKLY UPDATES PAGE
+========================================================= */
 
 .learning {
     position: relative;
@@ -719,13 +763,18 @@ img {
     gap: 30px;
 }
 
+
+/* =========================================================
+   15. LEARNING CARDS
+========================================================= */
+
 .learning-card {
     position: relative;
 
-    background: #ffffff;
+    background: var(--white);
 
     border:
-        1px solid #eadfe7;
+        1px solid var(--border);
 
     border-radius: 28px;
 
@@ -756,15 +805,13 @@ img {
     position: absolute;
 
     width: 180px;
-
     height: 180px;
 
     border-radius: 50%;
 
-    background: #f4e8ee;
+    background: var(--rose-pale);
 
     right: -85px;
-
     top: -85px;
 
     z-index: 0;
@@ -772,9 +819,13 @@ img {
 
 .learning-card > * {
     position: relative;
-
     z-index: 2;
 }
+
+
+/* =========================================================
+   16. FEATURED LEARNING CARDS
+========================================================= */
 
 .featured-card {
     display: grid;
@@ -787,9 +838,12 @@ img {
     align-items: start;
 }
 
+.learning-card-image {
+    width: 100%;
+}
+
 .learning-card-image img {
     width: 100%;
-
     height: 420px;
 
     object-fit: cover;
@@ -797,7 +851,7 @@ img {
     border-radius: 22px;
 
     border:
-        1px solid #eadfe7;
+        1px solid var(--border);
 
     box-shadow:
         0 14px 34px
@@ -807,6 +861,11 @@ img {
 .learning-card-content {
     min-width: 0;
 }
+
+
+/* =========================================================
+   17. WEEK DETAILS
+========================================================= */
 
 .week-row {
     display: flex;
@@ -821,7 +880,7 @@ img {
 }
 
 .entry-type {
-    color: #817581;
+    color: var(--text-light);
 
     font-size: 13px;
 
@@ -841,7 +900,7 @@ img {
 
     line-height: 1.2;
 
-    color: #332d3c;
+    color: var(--text-heading);
 
     margin-bottom: 18px;
 }
@@ -849,7 +908,7 @@ img {
 .learning-card p {
     max-width: 850px;
 
-    color: #625c69;
+    color: var(--text-medium);
 
     font-size: 17px;
 
@@ -857,9 +916,9 @@ img {
 }
 
 
-/* =========================
-   SKILL TAGS
-========================= */
+/* =========================================================
+   18. SKILL TAGS
+========================================================= */
 
 .skills-row {
     display: flex;
@@ -889,9 +948,9 @@ img {
 }
 
 
-/* =========================
-   CONTACT
-========================= */
+/* =========================================================
+   19. CONTACT SECTION
+========================================================= */
 
 .contact {
     max-width: 1120px;
@@ -907,7 +966,7 @@ img {
             #815a79
         );
 
-    color: #ffffff;
+    color: var(--white);
 
     padding: 75px;
 
@@ -926,7 +985,6 @@ img {
     position: absolute;
 
     width: 280px;
-
     height: 280px;
 
     border-radius: 50%;
@@ -936,12 +994,11 @@ img {
         rgba(255, 255, 255, 0.06);
 
     right: -80px;
-
     top: -80px;
 }
 
 .contact .section-label {
-    color: #ffffff;
+    color: var(--white);
 
     background:
         rgba(255, 255, 255, 0.12);
@@ -959,7 +1016,6 @@ img {
     margin-bottom: 14px;
 
     position: relative;
-
     z-index: 2;
 }
 
@@ -973,24 +1029,21 @@ img {
     margin-bottom: 30px;
 
     position: relative;
-
     z-index: 2;
 }
 
 .secondary {
-    background: #ffffff;
-
+    background: var(--white);
     color: #65445f;
 
     position: relative;
-
     z-index: 2;
 }
 
 
-/* =========================
-   FOOTER
-========================= */
+/* =========================================================
+   20. FOOTER
+========================================================= */
 
 footer {
     text-align: center;
@@ -1000,17 +1053,369 @@ footer {
     border-top:
         1px solid #e7e1e6;
 
-    color: #817985;
+    color: var(--text-light);
 
     font-size: 14px;
 }
 
 
-/* =========================
-   TABLET
-========================= */
+/* =========================================================
+   21. RESUME PAGE HEADER
+========================================================= */
+
+.resume-header {
+    color: var(--white);
+
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(255, 255, 255, 0.10) 0%,
+            rgba(255, 255, 255, 0.10) 12%,
+            transparent 12%
+        ),
+        linear-gradient(
+            135deg,
+            #46354e 0%,
+            #704b6d 50%,
+            #a36d88 100%
+        );
+
+    border-bottom-left-radius: 55px;
+    border-bottom-right-radius: 55px;
+
+    overflow: hidden;
+}
+
+.resume-header .nav-links a {
+    color: var(--white);
+}
+
+.resume-header-content {
+    width: 100%;
+    max-width: 1180px;
+
+    margin: 0 auto;
+
+    padding: 85px 30px 110px;
+}
+
+.resume-header-content h1 {
+    font-size:
+        clamp(55px, 8vw, 92px);
+
+    line-height: 1;
+
+    margin-bottom: 24px;
+}
+
+.resume-header-content > p {
+    max-width: 700px;
+
+    color: #f2eaf0;
+
+    font-size: 19px;
+
+    margin-bottom: 30px;
+}
+
+.resume-header-buttons {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 14px;
+}
+
+.outline-button {
+    background: transparent;
+
+    color: var(--white);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.45);
+
+    box-shadow: none;
+}
+
+.outline-button:hover {
+    background:
+        rgba(255, 255, 255, 0.10);
+}
+
+
+/* =========================================================
+   22. RESUME GENERAL
+========================================================= */
+
+.resume-section {
+    position: relative;
+}
+
+.resume-section + .resume-section {
+    border-top:
+        1px solid #e7e1e6;
+}
+
+
+/* =========================================================
+   23. RESUME CARDS
+========================================================= */
+
+.resume-card {
+    width: 100%;
+
+    background: var(--white);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 26px;
+
+    padding: 35px 38px;
+
+    margin-bottom: 24px;
+
+    box-shadow:
+        0 14px 40px
+        rgba(64, 38, 61, 0.07);
+}
+
+.resume-card:last-child {
+    margin-bottom: 0;
+}
+
+.resume-card-heading {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 30px;
+
+    margin-bottom: 16px;
+}
+
+.resume-card h2 {
+    color: var(--text-heading);
+
+    font-size: 26px;
+
+    line-height: 1.2;
+}
+
+.resume-card h3 {
+    color: #4a3a4a;
+
+    font-size: 19px;
+
+    line-height: 1.4;
+
+    margin-bottom: 8px;
+}
+
+.resume-subtitle {
+    color: var(--text-light);
+
+    font-size: 15px;
+}
+
+.resume-date {
+    display: inline-block;
+
+    color: var(--plum);
+
+    background: var(--rose-light);
+
+    border:
+        1px solid #dfbfd0;
+
+    padding: 6px 12px;
+
+    border-radius: 999px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+.resume-card > p {
+    color: var(--text-medium);
+
+    margin-bottom: 14px;
+}
+
+.resume-card ul {
+    padding-left: 22px;
+
+    color: var(--text-medium);
+}
+
+.resume-card li {
+    margin-bottom: 8px;
+}
+
+.resume-card li:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   24. RESUME SKILLS GRID
+========================================================= */
+
+.skills-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+.skill-card {
+    background: var(--white);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 24px;
+
+    padding: 28px;
+
+    box-shadow:
+        0 12px 35px
+        rgba(64, 38, 61, 0.06);
+}
+
+.skill-card h3 {
+    color: var(--text-heading);
+
+    font-size: 20px;
+
+    margin-bottom: 8px;
+}
+
+.skill-card p {
+    color: var(--text-medium);
+}
+
+
+/* =========================================================
+   25. RESUME PROJECT CARDS
+========================================================= */
+
+.project-card {
+    border-left:
+        5px solid var(--rose);
+}
+
+
+/* =========================================================
+   26. ADDITIONAL RESUME GRID
+========================================================= */
+
+.additional-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+.additional-card {
+    background: var(--white);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 24px;
+
+    padding: 26px;
+
+    text-align: center;
+
+    box-shadow:
+        0 12px 35px
+        rgba(64, 38, 61, 0.06);
+}
+
+.additional-card h3 {
+    color: var(--text-heading);
+
+    font-size: 19px;
+
+    margin-bottom: 8px;
+}
+
+.additional-card p {
+    color: var(--text-medium);
+}
+
+
+/* =========================================================
+   27. RESUME VISUAL POLISH
+========================================================= */
+
+.resume-section .section-label {
+    margin-bottom: 32px;
+}
+
+.resume-section:nth-of-type(even) {
+    position: relative;
+}
+
+.resume-section:nth-of-type(even)::before {
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(240, 230, 238, 0.45);
+
+    right: -160px;
+    top: 70px;
+
+    z-index: -1;
+}
+
+
+/* =========================================================
+   28. RESUME LINK STYLING
+========================================================= */
+
+.resume-card a {
+    color: var(--plum);
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+.resume-card a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   29. TABLET
+========================================================= */
 
 @media (max-width: 950px) {
+
+    .section {
+        padding:
+            90px 25px;
+    }
 
     .about-grid {
         grid-template-columns:
@@ -1034,21 +1439,36 @@ footer {
         height: 360px;
     }
 
+    .updates-preview-grid {
+        gap: 40px;
+    }
+
+    .skills-grid {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+    .additional-grid {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
 }
 
 
-/* =========================
-   MOBILE
-========================= */
+/* =========================================================
+   30. SMALL TABLET / LARGE PHONE
+========================================================= */
 
-@media (max-width: 760px) {
+@media (max-width: 800px) {
 
     .nav {
-        padding: 20px;
+        padding:
+            20px 22px;
     }
 
     .nav-links {
-        gap: 13px;
+        gap: 15px;
 
         flex-wrap: wrap;
 
@@ -1059,11 +1479,71 @@ footer {
         font-size: 13px;
     }
 
+    .updates-preview-grid {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+    .featured-card {
+        grid-template-columns: 1fr;
+    }
+
+    .learning-card-image img {
+        height: 380px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .additional-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   31. MOBILE
+========================================================= */
+
+@media (max-width: 760px) {
+
+    body {
+        line-height: 1.6;
+    }
+
+    .nav {
+        padding: 20px;
+    }
+
+    .logo {
+        width: 44px;
+        height: 44px;
+
+        font-size: 15px;
+    }
+
+    .nav-links {
+        gap: 12px;
+
+        flex-wrap: wrap;
+
+        justify-content: flex-end;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+
+    /* HERO */
+
     .hero {
         min-height: auto;
 
         border-bottom-left-radius: 35px;
-
         border-bottom-right-radius: 35px;
     }
 
@@ -1074,16 +1554,24 @@ footer {
 
     .hero h1 {
         font-size: 54px;
+
+        letter-spacing: -1px;
     }
 
     .hero-description {
         font-size: 17px;
     }
 
+
+    /* GENERAL SECTION */
+
     .section {
         padding:
             80px 22px;
     }
+
+
+    /* ABOUT */
 
     .about-grid {
         grid-template-columns: 1fr;
@@ -1099,9 +1587,16 @@ footer {
         max-width: 280px;
     }
 
+    .about-content h2 {
+        font-size: 40px;
+    }
+
     .about-text {
         padding: 28px;
     }
+
+
+    /* UPDATE PREVIEW */
 
     .updates-preview-grid {
         grid-template-columns: 1fr;
@@ -1112,6 +1607,9 @@ footer {
     .latest-update {
         padding: 30px;
     }
+
+
+    /* UPDATES PAGE */
 
     .updates-header-content {
         padding:
@@ -1150,6 +1648,9 @@ footer {
         font-size: 27px;
     }
 
+
+    /* CONTACT */
+
     .contact {
         margin:
             30px 20px 70px;
@@ -1161,304 +1662,124 @@ footer {
     .contact h2 {
         font-size: 39px;
     }
-    /* =========================
-    RESUME PAGE HEADER
-    ========================= */
+
+
+    /* RESUME HEADER */
 
     .resume-header {
-        color: #ffffff;
-
-        background:
-            linear-gradient(
-                135deg,
-                #46354e 0%,
-                #704b6d 50%,
-                #a36d88 100%
-            );
-
-        border-bottom-left-radius: 55px;
-        border-bottom-right-radius: 55px;
+        border-bottom-left-radius: 35px;
+        border-bottom-right-radius: 35px;
     }
 
     .resume-header-content {
-        max-width: 1180px;
-
-        margin: 0 auto;
-
-        padding: 85px 30px 110px;
+        padding:
+            65px 22px 80px;
     }
 
     .resume-header-content h1 {
-        font-size: clamp(55px, 8vw, 92px);
-
-        line-height: 1;
-
-        margin-bottom: 24px;
+        font-size: 55px;
     }
 
     .resume-header-content > p {
-        max-width: 700px;
-
-        color: #f2eaf0;
-
-        font-size: 19px;
-
-        margin-bottom: 30px;
+        font-size: 17px;
     }
 
     .resume-header-buttons {
-        display: flex;
+        flex-direction: column;
 
-        flex-wrap: wrap;
-
-        gap: 14px;
-    }
-
-    .outline-button {
-        background: transparent;
-
-        color: #ffffff;
-
-        border:
-            1px solid rgba(255,255,255,0.45);
-
-        box-shadow: none;
-    }
-
-    .outline-button:hover {
-        background:
-            rgba(255,255,255,0.10);
+        align-items: flex-start;
     }
 
 
-    /* =========================
-    RESUME SECTIONS
-    ========================= */
-
-    .resume-section {
-        position: relative;
-    }
-
-    .resume-section + .resume-section {
-        border-top:
-            1px solid #e7e1e6;
-    }
-
-
-    /* =========================
-    RESUME CARDS
-    ========================= */
+    /* RESUME CARDS */
 
     .resume-card {
-        background: #ffffff;
-
-        border:
-            1px solid #eadfe7;
-
-        border-radius: 26px;
-
-        padding: 35px 38px;
-
-        margin-bottom: 24px;
-
-        box-shadow:
-            0 14px 40px
-            rgba(64, 38, 61, 0.07);
+        padding: 28px;
     }
 
     .resume-card-heading {
-        display: flex;
+        flex-direction: column;
 
-        justify-content: space-between;
-
-        align-items: flex-start;
-
-        gap: 30px;
-
-        margin-bottom: 16px;
+        gap: 10px;
     }
 
     .resume-card h2 {
-        color: #332d3c;
-
-        font-size: 26px;
-
-        line-height: 1.2;
-    }
-
-    .resume-card h3 {
-        color: #4a3a4a;
-
-        font-size: 19px;
-
-        margin-bottom: 8px;
-    }
-
-    .resume-subtitle {
-        color: #817581;
-
-        font-size: 15px;
+        font-size: 23px;
     }
 
     .resume-date {
-        color: #704b6d;
-
-        background: #f1dce7;
-
-        border:
-            1px solid #dfbfd0;
-
-        padding: 6px 12px;
-
-        border-radius: 999px;
-
-        font-size: 12px;
-
-        font-weight: 700;
-
-        white-space: nowrap;
+        align-self: flex-start;
     }
-
-    .resume-card > p {
-        color: #625c69;
-
-        margin-bottom: 14px;
-    }
-
-    .resume-card ul {
-        padding-left: 20px;
-
-        color: #625c69;
-    }
-
-    .resume-card li {
-        margin-bottom: 8px;
-    }
-
-
-    /* =========================
-    SKILL CARDS
-    ========================= */
 
     .skills-grid {
-        display: grid;
-
-        grid-template-columns:
-            repeat(2, 1fr);
-
-        gap: 20px;
+        grid-template-columns: 1fr;
     }
-
-    .skill-card {
-        background: #ffffff;
-
-        border:
-            1px solid #eadfe7;
-
-        border-radius: 24px;
-
-        padding: 28px;
-
-        box-shadow:
-            0 12px 35px
-            rgba(64, 38, 61, 0.06);
-    }
-
-    .skill-card h3 {
-        color: #332d3c;
-
-        margin-bottom: 8px;
-    }
-
-    .skill-card p {
-        color: #625c69;
-    }
-
-
-    /* =========================
-    PROJECT CARDS
-    ========================= */
-
-    .project-card {
-        border-left:
-            5px solid #b87994;
-    }
-
-
-    /* =========================
-    ADDITIONAL
-    ========================= */
 
     .additional-grid {
-        display: grid;
-
-        grid-template-columns:
-            repeat(3, 1fr);
-
-        gap: 20px;
+        grid-template-columns: 1fr;
     }
 
-    .additional-card {
-        background: #ffffff;
+}
 
-        border:
-            1px solid #eadfe7;
 
-        border-radius: 24px;
+/* =========================================================
+   32. EXTRA SMALL PHONES
+========================================================= */
 
-        padding: 26px;
+@media (max-width: 520px) {
 
-        text-align: center;
-
-        box-shadow:
-            0 12px 35px
-            rgba(64, 38, 61, 0.06);
+    .nav {
+        align-items: flex-start;
     }
 
-    .additional-card h3 {
-        color: #332d3c;
+    .nav-links {
+        max-width: 250px;
 
-        margin-bottom: 8px;
+        row-gap: 8px;
     }
 
-    .additional-card p {
-        color: #625c69;
+    .hero h1 {
+        font-size: 46px;
     }
 
+    .eyebrow {
+        font-size: 10px;
 
-    /* =========================
-    RESUME MOBILE
-    ========================= */
+        letter-spacing: 1.5px;
+    }
 
-    @media (max-width: 760px) {
+    .section {
+        padding:
+            65px 18px;
+    }
 
-        .resume-header-content {
-            padding:
-                65px 22px 80px;
-        }
+    .about-content h2 {
+        font-size: 36px;
+    }
 
-        .resume-header-content h1 {
-            font-size: 55px;
-        }
+    .updates-preview-text h2 {
+        font-size: 38px;
+    }
 
-        .resume-card-heading {
-            flex-direction: column;
+    .updates-header-content h1,
+    .resume-header-content h1 {
+        font-size: 48px;
+    }
 
-            gap: 10px;
-        }
+    .learning-card-image img {
+        height: 300px;
+    }
 
-        .skills-grid {
-            grid-template-columns: 1fr;
-        }
+    .contact {
+        margin:
+            20px 15px 60px;
 
-        .additional-grid {
-            grid-template-columns: 1fr;
-        }
+        padding:
+            42px 24px;
+    }
 
-        .resume-card {
-            padding: 28px;
-        }
-
+    .contact h2 {
+        font-size: 35px;
     }
 
 }
