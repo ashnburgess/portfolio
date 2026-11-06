@@ -1781,5 +1781,323 @@ footer {
     .contact h2 {
         font-size: 35px;
     }
+/* =========================================================
+   FEATURED ARTICLE PAGE
+========================================================= */
 
+.article-header {
+    color: #ffffff;
+
+    background:
+        radial-gradient(
+            circle at 86% 18%,
+            rgba(255, 255, 255, 0.10) 0%,
+            rgba(255, 255, 255, 0.10) 13%,
+            transparent 13%
+        ),
+        linear-gradient(
+            135deg,
+            #46354e 0%,
+            #704b6d 50%,
+            #a36d88 100%
+        );
+
+    border-bottom-left-radius: 55px;
+    border-bottom-right-radius: 55px;
+
+    overflow: hidden;
+}
+
+.article-header-content {
+    max-width: 1180px;
+
+    margin: 0 auto;
+
+    padding: 85px 30px 110px;
+}
+
+.article-header-content h1 {
+    max-width: 900px;
+
+    font-size: clamp(50px, 7vw, 82px);
+
+    line-height: 1.03;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 18px;
+}
+
+.article-subtitle {
+    color: #f7c9da;
+
+    font-size: 22px;
+
+    font-weight: 600;
+
+    margin-bottom: 22px;
+}
+
+.article-description {
+    max-width: 720px;
+
+    color: #f2eaf0;
+
+    font-size: 18px;
+
+    margin-bottom: 32px;
+}
+
+.article-buttons {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 14px;
+}
+
+
+/* ARTICLE SECTION */
+
+.article-section {
+    position: relative;
+}
+
+.article-section + .article-section {
+    border-top: 1px solid #e7e1e6;
+}
+
+
+/* OVERVIEW */
+
+.article-overview-grid {
+    display: grid;
+
+    grid-template-columns:
+        0.8fr 1.2fr;
+
+    gap: 65px;
+
+    align-items: center;
+}
+
+.article-image img {
+    width: 100%;
+
+    height: 480px;
+
+    object-fit: cover;
+
+    border-radius: 28px;
+
+    border: 1px solid #eadfe7;
+
+    box-shadow:
+        0 20px 55px
+        rgba(54, 37, 53, 0.12);
+}
+
+.article-overview h2 {
+    font-size: clamp(36px, 5vw, 54px);
+
+    line-height: 1.1;
+
+    color: #332d3c;
+
+    margin-bottom: 22px;
+}
+
+.article-overview p {
+    color: #625c69;
+
+    font-size: 17px;
+
+    margin-bottom: 18px;
+}
+
+
+/* QUESTION */
+
+.question-card {
+    background:
+        linear-gradient(
+            135deg,
+            #4d3c54,
+            #815a79
+        );
+
+    color: #ffffff;
+
+    padding: 60px;
+
+    border-radius: 32px;
+
+    box-shadow:
+        0 20px 60px
+        rgba(51, 34, 51, 0.14);
+}
+
+.question-card h2 {
+    max-width: 900px;
+
+    font-size: clamp(32px, 5vw, 48px);
+
+    line-height: 1.15;
+
+    margin-bottom: 22px;
+}
+
+.question-card p {
+    max-width: 780px;
+
+    color: #eee3eb;
+
+    font-size: 18px;
+}
+
+
+/* FEATURES */
+
+.article-feature-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+.article-feature-card {
+    background: #ffffff;
+
+    border: 1px solid #eadfe7;
+
+    border-radius: 26px;
+
+    padding: 32px;
+
+    box-shadow:
+        0 14px 40px
+        rgba(64, 38, 61, 0.07);
+}
+
+.feature-number {
+    display: inline-block;
+
+    color: #704b6d;
+
+    background: #f1dce7;
+
+    padding: 7px 12px;
+
+    border-radius: 999px;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    margin-bottom: 20px;
+}
+
+.article-feature-card h3 {
+    color: #332d3c;
+
+    font-size: 22px;
+
+    margin-bottom: 12px;
+}
+
+.article-feature-card p {
+    color: #625c69;
+}
+
+
+/* TAKEAWAY */
+
+.takeaway-card {
+    background: #ffffff;
+
+    border: 1px solid #eadfe7;
+
+    border-left: 6px solid #b87994;
+
+    border-radius: 28px;
+
+    padding: 45px;
+
+    box-shadow:
+        0 18px 50px
+        rgba(64, 38, 61, 0.08);
+}
+
+.takeaway-card h2 {
+    color: #332d3c;
+
+    font-size: clamp(32px, 5vw, 48px);
+
+    line-height: 1.1;
+
+    margin-bottom: 18px;
+}
+
+.takeaway-card p {
+    max-width: 850px;
+
+    color: #625c69;
+
+    font-size: 18px;
+
+    margin-bottom: 28px;
+}
+
+
+/* ARTICLE MOBILE */
+
+@media (max-width: 850px) {
+
+    .article-overview-grid {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .article-image img {
+        height: 400px;
+    }
+
+    .article-feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 760px) {
+
+    .article-header-content {
+        padding:
+            65px 22px 80px;
+    }
+
+    .article-header-content h1 {
+        font-size: 48px;
+    }
+
+    .article-subtitle {
+        font-size: 19px;
+    }
+
+    .question-card {
+        padding: 38px 28px;
+    }
+
+    .takeaway-card {
+        padding: 32px 28px;
+    }
+
+    .article-image img {
+        height: 340px;
+    }
+
+}
 }
